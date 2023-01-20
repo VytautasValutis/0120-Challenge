@@ -12,6 +12,7 @@
     font-weight: bold;
     font-style: normal;
 }
+@import './styles/layout.css';
 :root {
     --main-back-color: #E5E5E5;
     --hover-back-color: #E5E5E5;
