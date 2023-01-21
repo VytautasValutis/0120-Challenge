@@ -11,7 +11,7 @@ body {
     background-color: var(--main-back-color);
     display: block;
 }
-.header {
+.nav {
     width: 100px;
     height: 906px;
     background-color: var(--hover-back-color);
@@ -19,35 +19,72 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 20px; */
+    transition: width 2s;
 }
-.header-logo {
+.nav:hover {
+    width: 206px;
+}
+.nav-logo {
     width: 68px;
     height: 34px;
     margin-top: 52px;
     display: block;
 }
 .line {
-    width: 63px;
+    width: 62%;
     height: 2px;
     display: block;
     background-color: var(--icon-color);
     margin-top: 24px;
 }
+.nav.line:hover{
+    width: 62%;
+}
 .nav-home-icons {
     margin-top: 34px;
     font-size: 25px;
-    width: 89px;
+    width: calc(100% - 11px);
     height: 57px;
-    line-height: 56px;
-    text-decoration: none;
     text-align: center;
     background-color: #fff;
     align-self: flex-end;
     border-radius: 25px 0px 0px 25px;
     color: var(--home-icon-color);
+    transition: 2s;
+}
+.nav-home-icons:hover {
+    width: calc(100% - 11px);    
+}
+.home-icon {
+    width: 25px;
+    line-height: 56px;
+    text-decoration: none;
+    display: inline-block;
+}
+.element {
+    width: 100%;
+    float: left;
+}
+.miracle {
+    /* display: none; */
+    display: none;
+    font-size: 16px;
+    line-height: 17px;
+    font-weight: 400;
+    text-align: center;
+}
+.nav:hover .miracle {
+    display: inline-block;
 
 }
+/* .nav-home-icons::after {
+    content: "HOME";
+    font-size: 18px;
+    display: none;
+}
+.nav:hover .nav-home-icons::after { 
+    display: block;
+} */
 .nav-icons {
     margin-top: 34px;
     display: block;
