@@ -10,6 +10,7 @@ body {
     height: 906px;
     background-color: var(--main-back-color);
     display: block;
+    position: relative;
 }
 .nav {
     width: 100px;
@@ -18,8 +19,8 @@ body {
     float: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
     transition: width 2s;
+    box-shadow: 0px 4px 0 #000;
 }
 .nav:hover {
     width: 206px;
@@ -28,6 +29,7 @@ body {
     width: 68px;
     height: 34px;
     margin-top: 52px;
+    margin-left: calc(50% - 34px);
     display: block;
 }
 .line {
@@ -36,9 +38,11 @@ body {
     display: block;
     background-color: var(--icon-color);
     margin-top: 24px;
+    margin-left: 18px;
 }
-.nav.line:hover{
+.nav:hover .line{
     width: 62%;
+    margin-left: 19%;
 }
 .nav-home-icons {
     margin-top: 34px;
@@ -46,8 +50,8 @@ body {
     width: calc(100% - 11px);
     height: 57px;
     text-align: center;
+    margin-left: 11px;
     background-color: #fff;
-    align-self: flex-end;
     border-radius: 25px 0px 0px 25px;
     color: var(--home-icon-color);
     transition: 2s;
@@ -60,42 +64,61 @@ body {
     line-height: 56px;
     text-decoration: none;
     display: inline-block;
-}
-.element {
-    width: 100%;
-    float: left;
+    text-align: center;
 }
 .miracle {
-    /* display: none; */
+    /* display: inline-block; */
     display: none;
     font-size: 16px;
-    line-height: 17px;
-    font-weight: 400;
+    line-height: 18px;
+    font-weight: 500;
     text-align: center;
+    width: 0;
+    text-align: left;
+    padding-left: 5px;
+    margin: 0;
 }
 .nav:hover .miracle {
     display: inline-block;
-
+    width: 81px;
 }
-/* .nav-home-icons::after {
-    content: "HOME";
-    font-size: 18px;
-    display: none;
-}
-.nav:hover .nav-home-icons::after { 
-    display: block;
-} */
 .nav-icons {
     margin-top: 34px;
-    display: block;
-    width: 25px;
     height: 25px;
     text-decoration: none;
     font-size: 23px;
     line-height: 25px;
+    margin-left: 37px;
     color: var(--icon-color);
 }
-.gamepad-icons {
-    width: 40px;
-    font-size: 38px;
+.nav:hover .nav-icons {
+    margin-top: 34px;
+}
+.icons {
+    color: var(--icon-color);
+    display: inline-block;
+    width: 81px;
+    line-height: 18px;
+    text-align: center;
+}
+.copy {
+    font-size: 11px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    line-height: 1em;
+    margin: 0;
+    width: 184px;
+    height: 24px;
+    text-align: center;
+    transform: translateX(-50%);
+}
+.copy::before {
+    content: "";
+    width: 346px;
+    height: 1px;
+    border-bottom: 1px solid var(--home-icon-color);
+    display: block;
+    transform: translateX(-81px);
 }
